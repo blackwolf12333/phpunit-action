@@ -6,6 +6,7 @@ echo "Docker tag: $docker_tag" >> output.log 2>&1
 
 if [ -n "$ACTION_PHPUNIT_PATH" ]
 then
+	echo "Using phar"
 	phar_url="https://phar.phpunit.de/phpunit"
 	if [ "$ACTION_VERSION" != "latest" ]
 	then
