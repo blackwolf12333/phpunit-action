@@ -18,6 +18,7 @@ then
 	phar_path="${github_action_path}/phpunit.phar"
 else
 	phar_path="${GITHUB_WORKSPACE}/$ACTION_PHPUNIT_PATH"
+	echo "Using vendored phpunit: $phar_path" >> output.log 2>&1
 fi
 
 command_string=("phpunit")
